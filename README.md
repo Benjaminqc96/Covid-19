@@ -39,3 +39,5 @@ De las 310206 observaciones se hace un muestreo aleatorio simple del cual se eli
 
 De la muestra obtenida se observa una diferencia considerable entre la clase 0 (sobreviven) y la clase 1 (fallecen), hay que aplicar muestreo informativo previo al entrenemiento de la regresón logística, por lo que se generan muestras sintéticas con la técnica *Syntetic Minority Oversampling Technique* (SMOTE)
 
+
+
