@@ -11,7 +11,7 @@ base_covid <- base_em %>% select(SEXO, TIPO_PACIENTE, FECHA_DEF, INTUBADO, NEUMO
                                  CLASIFICACION_FINAL)
 
 
-spark_write_csv(x = base_covid, path = '/home/benjamin/Escritorio/covid/base_cov.csv')
+spark_write_csv(x = base_covid, path = 'base_cov.csv')
 
 spark_disconnect(sc = sc)
 
