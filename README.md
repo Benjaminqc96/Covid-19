@@ -8,11 +8,12 @@ procede a seleccionar las variables de interés y hacer la partición en R, usan
 Una vez hecha la selección y partición se procede a hacer el anális exploratorio de los datos, en particular se analiza la distribución de las defunciones por edad, así como la supervivencia. La mortalidad tiene su punto más alto alrededor de los 60 años, mientras que la supervivencia tiene su punto más alto alrededor de los 30
 años.
 
-<p align='center'> 
 
-![](https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistmort.png)
-Gráfico de mortalidad
+<p align="center">
+  <img width="200" src="https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistmort.png" alt="Material Bread logo">
 </p>
+
+
 
 !['Gráfico de supervivencia'](https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistsob.png)
 
