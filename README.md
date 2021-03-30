@@ -11,11 +11,14 @@ años.
 
 <p align="center">
   Gráfico de mortalidad 
-  <img width="1000" src="https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistmort.png">
+  <img width="500" src="https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistmort.png">
+</p>
+
+<p align="center">
+  Gráfico de supervivencia 
+  <img width="500" src="https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistsob.png">
 </p>
 
 
-
-!['Gráfico de supervivencia'](https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistsob.png)
 
 
