@@ -2,8 +2,9 @@ import pandas as pd
 from collections import Counter
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sb
 
-base = pd.read_csv('/home/benjamin/Escritorio/covid/base_cov.csv/p1.csv')
+base = pd.read_csv('p1.csv')
 base.head()
 
 casos_positivos = base[(base['CLASIFICACION_FINAL'] == 1) |
@@ -70,14 +71,14 @@ plt.bar(dist_edad_d.keys(), dist_edad_d.values())
 plt.xlabel('Edad')
 plt.ylabel('Numero de muertes')
 plt.show()
-#plt.savefig('/home/benjamin/Escritorio/coviddistmort.png')
+#plt.savefig('coviddistmort.png')
 
 plt.figure()
 plt.bar(dist_edad_s.keys(), dist_edad_s.values())
 plt.xlabel('Edad')
 plt.ylabel('Numero de sobrevivientes')
 plt.show()
-#plt.savefig('/home/benjamin/Escritorio/coviddistsob.png')
+#plt.savefig('coviddistsob.png')
 
 #Fecha de defuncion variable binaria dependiente
 casos_positivos['DEF'] = np.where(casos_positivos['FECHA_DEF'].str.contains('9999-99-99'), 0,1)
@@ -138,7 +139,7 @@ variables = ['hombre', 'mujer', 'fijo', 'int', 'neu',
                       'diab', 'asma', 'epoc', 'inm', 'hip', 'car', 'obe',
                            'ren', 'tab', 'edad']
 
-base_final = base_final.sample(frac = 0.08)
+base_final = base_final.sample(frac = 0.08, randomstate=0)
 
 conjunto_x = base_final.loc[:, variables]
 conjunto_y = base_final.loc[:, 'clase']
@@ -193,12 +194,12 @@ plt.ylim([0.0, 1.05])
 plt.xlabel('Falsos Positivos')
 plt.ylabel('Verdaderos Positivos ')
 plt.legend(loc="lower right")
-#plt.savefig('/home/benjamin/Escritorio/ROC.png')
+#plt.savefig('ROC.png')
 
 
 
 
-base2 = pd.read_csv('/home/benjamin/Escritorio/covid/base_cov.csv/p3.csv')
+base2 = pd.read_csv('p2.csv')
 
 cp_2 = base2[(base2['CLASIFICACION_FINAL'] == 1) |
                        (base2['CLASIFICACION_FINAL'] == 2) |
