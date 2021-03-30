@@ -33,8 +33,9 @@ De las 310206 observaciones se hace un muestreo aleatorio simple del cual se eli
 </p>
 
 <p align="center">
-  <img width="500" src="https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistsob.png">
+  <img width="500" src="https://github.com/Benjaminqc96/Covid-19/blob/main/casos.png">
 </p>
 
 
 De la muestra obtenida se observa una diferencia considerable entre la clase 0 (sobreviven) y la clase 1 (fallecen), hay que aplicar muestreo informativo previo al entrenemiento de la regresón logística, por lo que se generan muestras sintéticas con la técnica *Syntetic Minority Oversampling Technique* (SMOTE)
+
