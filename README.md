@@ -10,8 +10,10 @@ se analiza la distribución de las defunciones por edad, así como la superviven
 más alto alrededor de los 60 años, mientras que la supervivencia tiene su punto más alto alrededor de los 30
 años.
 
-Gráfico de mortalidad
-![](https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistmort.png)
 
-Gráfico de supervivencia
-![](https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistsob.png)
+![Gráfico de mortalidad](https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistmort.png)
+
+
+![Gráfico de supervivencia](https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistsob.png)
+
+
