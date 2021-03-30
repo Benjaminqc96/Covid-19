@@ -10,7 +10,8 @@ años.
 
 
 <p align="center">
-  <img width="200" src="https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistmort.png" alt="Material Bread logo">
+  Gráfico de mortalidad 
+  <img width="100" src="https://github.com/Benjaminqc96/Covid-19/blob/main/coviddistmort.png">
 </p>
 
 
