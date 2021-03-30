@@ -39,5 +39,37 @@ De las 310206 observaciones se hace un muestreo aleatorio simple del cual se eli
 
 De la muestra obtenida se observa una diferencia considerable entre la clase 0 (sobreviven) y la clase 1 (fallecen), hay que aplicar muestreo informativo previo al entrenemiento de la regresón logística, por lo que se generan muestras sintéticas con la técnica *Syntetic Minority Oversampling Technique* (SMOTE)
 
+Una vez balanceado el conjunto de datos se hace la regresión teniendo como variable dependiente la 'clase' y como variables dependientes el género, la edad, y las demás relacionadas a los padecimientos de enfermedades. Para la seleccion de las variables se emplea la eliminación recursiva de variables (*Recursive Feature Elimination*) fijando como objetivo 5 variables.
 
 
+<p align="center">
+  Resumen del modelo 
+</p>
+
+<p align="center">
+  <img width="500" src="https://github.com/Benjaminqc96/Covid-19/blob/main/resumen.png">
+</p>
+
+Las variables resultantes con un nivel superior al 95% de confianza son:
+- fijo: toma valor de 1 si el paciente fue internado en un hospital covid.
+- int: toma valor de 1 si el paciente fue intubado
+- neu: toma valor de 1 si el paciente presentó neumonía.
+- asma: toma valor de 1 si el paciente padece de asma.
+- edad: vector numerico transformado de la edad.
+
+Así mismo, se hizo el procedimiento de validación cruzada en 10 pliegues al conjunto preparado obteniendo una precisión promedio de 90.74%, con una desviación estandar de 0.46%, lo que nos indica que es un modelo robusto, estable y escalable. La curva ROC nos indica que el modelo en general tiene un 87% de probabilidad de clasificar adecuadamente los casos en los que los pacientes sobreviven o fallecen a causa de covid-19.
+
+<p align="center">
+  Curva ROC 
+</p>
+
+<p align="center">
+  <img width="500" src="https://github.com/Benjaminqc96/Covid-19/blob/main/ROC.png">
+</p>
+
+
+## Dicusión de Resultados
+
+En los análisis previos algunas variables que supondrían ser un predictor fiable para la clasificación no lo fueron al correr el modelo, esto debido a que no se contemplan los enfectos netos sino efectos conjuntos. En ésta investigación se encuentra evidencia científica de que el hecho de llevar a un paciente con sintomas de la enfermedad reduce sus probabilidades de fallecer, tal y como lo indica el coeficiente de la variable 'fijo', otra variable que reduce la probabilidad de que el paciente pierda la vida es el padecer asma, situación que puede ser explicada por los efectos positivos de los medicamentos contra el asma en pacientes que se infectaron de covid-19 como lo establece la universidad de Oxford https://www.forbes.com.mx/noticias-medicina-asma-oxford-estudio-reduce-probabilidad-hospitalizacion-covid-19/. Por otro lado los coeficientes positivos del modelo son de las varibles de la edad, así como el padecimiento de neumonia y hubo que intubar al paciente. 
+
+Dada la extension de la base de datos fue posible calcular la presición del modelo construido con nuevos datos y determinar si en efecto fue un modelo robusto, estable e incluso escalable, por lo que se evaluaron las demás particiones hechas en R (6 particiones, una para análisis) obteniendo precisiones de entre 90% y 91% para las 5 particiones restantes.
